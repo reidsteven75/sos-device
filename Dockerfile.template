@@ -6,6 +6,9 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3-stretch-run
 # for instance if you need git, just uncomment the line below.
 # RUN install_packages git
 
+# Hologram install
+RUN curl -L hologram.io/python-install | bash
+
 # Set our working directory
 WORKDIR /usr/src/app
 
